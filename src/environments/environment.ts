@@ -10,9 +10,10 @@ export const environment = {
   authURL: 'https://sistemainventario-api.herokuapp.com/auth/',
   changePasswordURL: 'https://sistemainventario-api.herokuapp.com/email-password/',
   usuariosURL: 'https://sistemainventario-api.herokuapp.com/usuarios/',
+  inmueblesURL: 'https://sistemainventario-api.herokuapp.com/inmuebles/',
 };
 
-// Variables for localhost
+// // Variables for localhost
 // export const environment = {
 //   production: false,
 //   productoURL: 'http://localhost:8080/productos/',
@@ -20,4 +21,5 @@ export const environment = {
 //   changePasswordURL: 'http://localhost:8080/email-password/',
 //   usuariosURL: 'http://localhost:8080/usuarios/',
 //   categoriaURL: 'http://localhost:8080/categorias/',
+//   inmueblesURL: 'http://localhost:8080/inmuebles/',
 // };

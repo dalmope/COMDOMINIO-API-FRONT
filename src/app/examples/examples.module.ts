@@ -10,6 +10,7 @@ import { InmueblesComponent } from './inmuebles/inmuebles.component';
 import { PropietariosComponent } from './propietarios/propietarios.component';
 import { EscenariosComponent } from './escenarios/escenarios.component';
 import { ExtractosComponent } from './extractos/extractos.component';
+import { TablaInmueblesComponent } from './inmuebles/tabla-inmuebles/tabla-inmuebles.component';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { ExtractosComponent } from './extractos/extractos.component';
         InmueblesComponent,
         PropietariosComponent,
         EscenariosComponent,
-        ExtractosComponent
+        ExtractosComponent,
+        TablaInmueblesComponent
     ]
 })
 export class ExamplesModule { }
