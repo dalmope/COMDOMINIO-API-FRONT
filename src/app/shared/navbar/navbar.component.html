@@ -11,45 +11,45 @@
         <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="isLogged">
-                    <a class="nav-link" rel="tooltip" title="Inmuebles" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                    <a class="nav-link" rel="tooltip" title="Inmuebles" data-placement="bottom" [routerLink]="['/inmuebles']">
                         <i class="fa fa-home"></i>
                         <p class="d-lg-none">Inmuebles</p>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="isLogged">
-                    <a class="nav-link" rel="tooltip" title="Propietarios" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                    <a class="nav-link" rel="tooltip" title="Propietarios" data-placement="bottom" [routerLink]="['/propietarios']">
                         <i _ngcontent-oiv-c117="" class="nc-icon nc-single-02"></i>
                         <p class="d-lg-none">Propietarios</p>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="isLogged">
-                    <a class="nav-link" rel="tooltip" title="Escenarios" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                    <a class="nav-link" rel="tooltip" title="Escenarios" data-placement="bottom" [routerLink]="['/escenarios']">
                         <i _ngcontent-uca-c117="" class="nc-icon nc-istanbul"></i>
                         <p class="d-lg-none">Escenarios</p>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="isLogged">
-                    <a class="nav-link" rel="tooltip" title="Extractos" data-placement="bottom" href="https://www.github.com/CreativeTimOfficial/paper-kit-2-angular" target="_blank">
+                    <a class="nav-link" rel="tooltip" title="Extractos" data-placement="bottom" [routerLink]="['/extractos']">
                         <i _ngcontent-ufy-c117="" class="nc-icon nc-money-coins"></i>
                         <p class="d-lg-none">Extractos</p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <!-- <li class="nav-item" *ngIf="!isDocumentation()">
                     <a href="http://pk2-angular.creative-tim.com/documentation/tutorial" class="nav-link" target="_blank"><i class="nc-icon nc-book-bookmark"></i> Documentation</a>
-                </li>
+                </li> -->
                 <li class="nav-item" *ngIf="!isLogged">
                     <a [routerLink]="['/signup']" class="btn btn-danger btn-round">Iniciar Sesion</a>
                 </li>
                 <li (click)="onLogOut()" class="nav-item" *ngIf="isLogged">
                     <a class="btn btn-danger btn-round">Cerrar Sesion</a>
                 </li>
-                <li class="nav-item" *ngIf="!isHome()">
+                <!-- <li class="nav-item" *ngIf="!isHome()">
                     <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
                     <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>
-                </li>
-                <li class="nav-item" *ngIf="isDocumentation()">
+                </li> -->
+                <!-- <li class="nav-item" *ngIf="isDocumentation()">
                     <a href="https://github.com/creativetimofficial/paper-kit-2-angular/issues?ref=pk2-free-local" target="_blank" class="nav-link">Have an issue</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

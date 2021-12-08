@@ -6,6 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
+import { InmueblesComponent } from './inmuebles/inmuebles.component';
+import { PropietariosComponent } from './propietarios/propietarios.component';
+import { EscenariosComponent } from './escenarios/escenarios.component';
+import { ExtractosComponent } from './extractos/extractos.component';
 
 @NgModule({
     imports: [
@@ -16,7 +20,11 @@ import { SignupComponent } from './signup/signup.component';
     declarations: [
         LandingComponent,
         SignupComponent,
-        ProfileComponent
+        ProfileComponent,
+        InmueblesComponent,
+        PropietariosComponent,
+        EscenariosComponent,
+        ExtractosComponent
     ]
 })
 export class ExamplesModule { }
