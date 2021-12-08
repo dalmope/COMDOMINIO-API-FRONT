@@ -12,11 +12,11 @@ export class InmueblesService {
   constructor(private httpClient: HttpClient) { }
 
   get() {
-    return this.httpClient.get(`${this.inmueblesURL}/inmuebles`);
+    return this.httpClient.get(`${this.inmueblesURL}`);
   }
 
   getOne(id: number) {
-    return this.httpClient.get(`${this.inmueblesURL}/inmuebles/${id}`);
+    return this.httpClient.get(`${this.inmueblesURL}/${id}`);
   }
 
 

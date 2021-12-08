@@ -9,6 +9,7 @@ import { ProfileComponent } from './examples/profile/profile.component';
 import { SignupComponent } from './examples/signup/signup.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { InmueblesComponent } from './examples/inmuebles/inmuebles.component';
+import { DataTablesModule } from 'angular-datatables';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const routes: Routes =[
     BrowserModule,
     RouterModule.forRoot(routes,{
       useHash: true
-    })
+    }),
+    DataTablesModule
   ],
   exports: [
   ],

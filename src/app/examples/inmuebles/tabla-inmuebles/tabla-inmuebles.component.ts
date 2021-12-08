@@ -7,7 +7,6 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-tabla-inmuebles',
   templateUrl: './tabla-inmuebles.component.html',
-  styleUrls: ['./tabla-inmuebles.component.css']
 })
 export class TablaInmueblesComponent implements OnInit {
 

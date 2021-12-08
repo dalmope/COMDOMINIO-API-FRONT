@@ -14,6 +14,7 @@ import { ExamplesModule } from './examples/examples.module';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -33,7 +34,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
