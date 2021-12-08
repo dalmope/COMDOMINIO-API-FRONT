@@ -14,6 +14,7 @@ import { ExamplesModule } from './examples/examples.module';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { interceptorProvider } from './interceptors/prod-interceptor.service';
 import { DataTablesModule } from 'angular-datatables';
 
 
@@ -34,8 +35,9 @@ import { DataTablesModule } from 'angular-datatables';
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    DataTablesModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

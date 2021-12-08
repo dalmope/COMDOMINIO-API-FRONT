@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
 export class TablaInmueblesComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
-  inmuebles: any[] = [];
+  inmuebles: any;
   isAdmin: boolean;
 
   // We use this trigger because fetching the list of persons can be quite long,
@@ -37,7 +37,7 @@ export class TablaInmueblesComponent implements OnInit {
   cargarInmuebles() {
     this.inmueblesService.get().subscribe(
       data => {
-        this.inmuebles = (data as any).data;
+        this.inmuebles = data;
         this.dtTrigger.next();
       },
       err => {
@@ -47,7 +47,6 @@ export class TablaInmueblesComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
 }

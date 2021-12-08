@@ -11,12 +11,14 @@ import { PropietariosComponent } from './propietarios/propietarios.component';
 import { EscenariosComponent } from './escenarios/escenarios.component';
 import { ExtractosComponent } from './extractos/extractos.component';
 import { TablaInmueblesComponent } from './inmuebles/tabla-inmuebles/tabla-inmuebles.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         NgbModule,
+        DataTablesModule
     ],
     declarations: [
         LandingComponent,

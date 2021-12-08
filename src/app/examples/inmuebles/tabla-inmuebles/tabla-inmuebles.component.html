@@ -1,14 +1,15 @@
 <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Dirección</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let inmueble of inmuebles">
-        <td>{{ inmueble.id }}</td>
-        <td>{{ inmueble.direccion }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Dirección</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inmueble of inmuebles">
+      <td>{{ inmueble.id }}</td>
+      <td>{{ inmueble.nombreUsuario }}</td>
+    </tr>
+  </tbody>
+</table>
+
