@@ -1,0 +1,16 @@
+<table *ngIf="propietarios" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped row-border hover ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let propietario of propietarios">
+        <td>{{ propietario.id }}</td>
+        <td>{{ propietario.nombre }}</td>
+        <td>{{ propietario.apellido }}</td>
+      </tr>
+    </tbody>
+  </table>

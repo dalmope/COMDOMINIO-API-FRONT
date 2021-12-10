@@ -1,1 +1,33 @@
-<p>propietarios works!</p>
+<div class="wrapper">
+    <div class=" filter page-header page-header-xs" data-parallax="true"
+        style="background-image: url('./assets/img/joyful-multiethnic.jpg');">
+        <div class="filter"></div>
+        <h2 style="font-size: 15vh; color: rgb(255, 255, 255);">Propietarios</h2>
+    </div>
+    <!-- navtab -->
+    <div class="nav-tabs-navigation">
+        <ngb-tabset [justify]="'center'">
+            <ngb-tab title="Lista">
+                <ng-template ngbTabContent>
+                    <div *ngIf="isAdmin" class="section profile-content">
+                        <div class="container">
+                            <app-tabla-inmuebles></app-tabla-inmuebles>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Nuevo">
+                <ng-template ngbTabContent>
+                    <app-nuevo-propietario></app-nuevo-propietario>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+
+    <div *ngIf="!isAdmin" class="section profile-content">
+        <div class="container">
+            <!-- <app-tabla-inmuebles></app-tabla-inmuebles> -->
+        </div>
+    </div>
+
+</div>

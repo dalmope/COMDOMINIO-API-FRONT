@@ -1,0 +1,125 @@
+<div class="container">
+    <div *ngIf="!isAdmin">
+        <form class="register-form" #f="ngForm" (ngSubmit)="agregarInmueble()" novalidate>
+            <label>Registrar Nuevo Usuario</label>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i _ngcontent-qsr-c126="" class="nc-icon nc-badge"></i>
+                            </span>
+                        </div>
+                        <input id="tipoDoc" name="tipoDoc" type="text" class="form-control" placeholder="Tipo de Documento"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="tipoDoc" required />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                        </div>
+                        <input id="documento" name="documento" type="text" class="form-control" placeholder="Numero de Documento"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="documento" required />
+                    </div>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-signature"></i>
+                            </span>
+                        </div>
+                        <input class="" id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombres"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="nombre" required />
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-signature"></i>
+                            </span>
+                        </div>
+                        <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellidos"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="apellido" required />
+                    </div>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-signature"></i>
+                            </span>
+                        </div>
+                        <input id="nombreUsuario" name="nombreUsuario" type="text" class="form-control" placeholder="Nombre de Usuario"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="nombreUsuario" required />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                        </div>
+                        <input id="telefono" name="telefono" type="text" class="form-control" placeholder="Telefono de Contacto"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="telefono" required />
+                    </div>
+                </div>
+            </div>
+
+<br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-at"></i>
+                            </span>
+                        </div>
+                        <input class="" id="email" name="email" type="text" class="form-control" placeholder="Correo Electronico"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="email" required />
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-key"></i>
+                            </span>
+                        </div>
+                        <input id="password" name="password" type="text" class="form-control" placeholder="Contraseña"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="password" required />
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-danger btn-block btn-round">
+                Registrar
+            </button>
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>

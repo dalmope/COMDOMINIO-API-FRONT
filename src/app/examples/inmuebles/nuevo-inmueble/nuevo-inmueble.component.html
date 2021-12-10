@@ -1,0 +1,31 @@
+<div class="container">
+
+
+    <div *ngIf="!isAdmin">
+        <form  class="register-form" #f="ngForm" (ngSubmit)="agregarInmueble()" novalidate>
+            <label>Registrar Nuevo Inmueble</label>
+            <br>
+            <br>
+            <br>
+            <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i _ngcontent-njr-c124="" class="nc-icon nc-pin-3"></i>
+                    </span>                   
+                </div>
+                <input id="direccion" name="direccion" type="text" class="form-control" placeholder="Direccion"
+                    (focus)="focus = true" (blur)="focus = false" [(ngModel)]="direccion" required />
+            </div>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-danger btn-block btn-round">
+                Registrar
+            </button>
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>

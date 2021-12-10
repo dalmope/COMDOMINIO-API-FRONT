@@ -10,15 +10,17 @@ import { SignupComponent } from './examples/signup/signup.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { InmueblesComponent } from './examples/inmuebles/inmuebles.component';
 import { DataTablesModule } from 'angular-datatables';
+import { PropietariosComponent } from './examples/propietarios/propietarios.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home',             component: ComponentsComponent },
-    { path: 'user-profile',     component: ProfileComponent },
-    { path: 'signup',           component: SignupComponent },
-    { path: 'landing',          component: LandingComponent },
-    { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'inmuebles',      component: InmueblesComponent }
+    { path: 'home',               component: ComponentsComponent },
+    { path: 'user-profile',       component: ProfileComponent },
+    { path: 'signup',             component: SignupComponent },
+    { path: 'landing',            component: LandingComponent },
+    { path: 'nucleoicons',        component: NucleoiconsComponent },
+    { path: 'inmuebles',          component: InmueblesComponent },
+    { path: 'propietarios',       component: PropietariosComponent }
 ];
 
 @NgModule({

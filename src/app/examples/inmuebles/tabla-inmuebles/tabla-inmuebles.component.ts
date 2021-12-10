@@ -12,10 +12,9 @@ export class TablaInmueblesComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   inmuebles: any;
-  isAdmin: boolean;
-
-  // We use this trigger because fetching the list of persons can be quite long,
-  // thus we ensure the data is fetched before rendering
+  isAdmin= false;
+  isLogged = false;
+  estados: any;
   dtTrigger: Subject<any> = new Subject<any>();
 
   constructor(
@@ -28,15 +27,18 @@ export class TablaInmueblesComponent implements OnInit {
 
     this.cargarInmuebles();
     this.isAdmin = this.tokenService.isAdmin();
+    this.isLogged = this.tokenService.isLogged();
 
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 2
+      pageLength: 10
     };
   }
+
   cargarInmuebles() {
     this.inmueblesService.get().subscribe(
       data => {
+        console.log(data);
         this.inmuebles = data;
         this.dtTrigger.next();
       },

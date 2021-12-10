@@ -12,6 +12,9 @@ import { EscenariosComponent } from './escenarios/escenarios.component';
 import { ExtractosComponent } from './extractos/extractos.component';
 import { TablaInmueblesComponent } from './inmuebles/tabla-inmuebles/tabla-inmuebles.component';
 import { DataTablesModule } from 'angular-datatables';
+import { NuevoInmuebleComponent } from './inmuebles/nuevo-inmueble/nuevo-inmueble.component';
+import { TablaPropietariosComponent } from './propietarios/tabla-propietarios/tabla-propietarios.component';
+import { NuevoPropietarioComponent } from './propietarios/nuevo-propietario/nuevo-propietario.component';
 
 @NgModule({
     imports: [
@@ -28,7 +31,10 @@ import { DataTablesModule } from 'angular-datatables';
         PropietariosComponent,
         EscenariosComponent,
         ExtractosComponent,
-        TablaInmueblesComponent
+        TablaInmueblesComponent,
+        NuevoInmuebleComponent,
+        TablaPropietariosComponent,
+        NuevoPropietarioComponent
     ]
 })
 export class ExamplesModule { }

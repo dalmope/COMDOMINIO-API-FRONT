@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'app/services/token.service';
 
 @Component({
   selector: 'app-inmuebles',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inmuebles.component.css']
 })
 export class InmueblesComponent implements OnInit {
-
-  constructor() { }
+  isAdmin = false;
+  constructor(
+    private Token: TokenService
+  ) {}
 
   ngOnInit(): void {
+    this.isAdmin = this.Token.isAdmin();
   }
 
 }
