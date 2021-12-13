@@ -4,22 +4,22 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 // Variables for heroku
-// export const environment = {
-//   production: false,
-//   productoURL: 'https://sistemainventario-api.herokuapp.com/producto/',
-//   authURL: 'https://sistemainventario-api.herokuapp.com/auth/',
-//   changePasswordURL: 'https://sistemainventario-api.herokuapp.com/email-password/',
-//   inmueblesURL: 'https://sistemainventario-api.herokuapp.com/usuarios/',
-//   inmueblesURL: 'https://sistemainventario-api.herokuapp.com/inmuebles/',
-// };
-
-// Variables for localhost
 export const environment = {
   production: false,
-  productoURL: 'http://localhost:8080/productos/',
-  authURL: 'http://localhost:8080/auth/',
-  changePasswordURL: 'http://localhost:8080/email-password/',
-  usuariosURL: 'http://localhost:8080/usuarios/',
-  categoriaURL: 'http://localhost:8080/categorias/',
-  inmueblesURL: 'http://localhost:8080/inmuebles/',
+  productoURL: 'https://awac-condominios.herokuapp.com/producto/',
+  authURL: 'https://awac-condominios.herokuapp.com/auth/',
+  changePasswordURL: 'https://awac-condominios.herokuapp.com/email-password/',
+  usuariosURL: 'https://awac-condominios.herokuapp.com/usuarios/',
+  inmueblesURL: 'https://awac-condominios.herokuapp.com/inmuebles/',
 };
+
+// // Variables for localhost
+// export const environment = {
+//   production: false,
+//   productoURL: 'http://localhost:8080/productos/',
+//   authURL: 'http://localhost:8080/auth/',
+//   changePasswordURL: 'http://localhost:8080/email-password/',
+//   usuariosURL: 'http://localhost:8080/usuarios/',
+//   categoriaURL: 'http://localhost:8080/categorias/',
+//   inmueblesURL: 'http://localhost:8080/inmuebles/',
+// };

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Inmueble } from 'app/models/Inmueble';
 import { InmueblesService } from 'app/services/inmuebles.service';
 import { ToastrService } from 'ngx-toastr';
@@ -21,6 +22,7 @@ export class NuevoInmuebleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   }
   
   agregarInmueble(){
@@ -30,11 +32,15 @@ export class NuevoInmuebleComponent implements OnInit {
       this.toastr.success('Inmueble Agregado Con Exito!', 'Agregado',{
       });
       this.router.navigateByUrl("/inmuebles");
-    },error=>{
-      this.toastr.error(`${error.error}`, 'Error',{
+    },err => {
+      this.toastr.error(err.error.mensaje, 'Fail', {
+        timeOut: 3000,  positionClass: 'toast-top-center',
       });
-    })
+    }); 
   }
 
 
-}
+  }
+
+
+

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuarios } from 'app/models/Usuarios';
-import { TokenService } from 'app/services/token.service';
 import { UsuariosService } from 'app/services/usuarios.service';
 import { ToastrService } from 'ngx-toastr';
 import { Subject } from 'rxjs';
@@ -12,32 +10,27 @@ import { Subject } from 'rxjs';
 })
 export class TablaPropietariosComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
-  propietarios: Usuarios[] = [];
-  isAdmin= false;
+  propietarios: any;
   estados: any;
-  isLogged = false;
   dtTrigger: Subject<any> = new Subject<any>();
 
   constructor(
-    private propietariosService: UsuariosService,
+    private usuariosService: UsuariosService,
     private toastr: ToastrService,
-    private tokenService: TokenService
   ) { }
 
   ngOnInit(): void {
     this.cargarPropietarios();
-    this.isAdmin = this.tokenService.isAdmin();
-    this.isLogged = this.tokenService.isLogged();
-
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 10
     };
   }
   cargarPropietarios() {
-    this.propietariosService.get().subscribe(data => {
-      this.propietarios = (data as any).data;
+    this.usuariosService.get().subscribe(data => {
+      this.propietarios = data;
       this.dtTrigger.next();
+      console.log(this.propietarios);
     });
     error => {
       this.toastr.error(error.error.message, 'Error');

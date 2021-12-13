@@ -9,9 +9,9 @@
         <ngb-tabset [justify]="'center'">
             <ngb-tab title="Lista">
                 <ng-template ngbTabContent>
-                    <div *ngIf="isAdmin" class="section profile-content">
+                    <div class="section profile-content">
                         <div class="container">
-                            <app-tabla-inmuebles></app-tabla-inmuebles>
+                            <app-tabla-propietarios></app-tabla-propietarios>
                         </div>
                     </div>
                 </ng-template>
@@ -23,11 +23,4 @@
             </ngb-tab>
         </ngb-tabset>
     </div>
-
-    <div *ngIf="!isAdmin" class="section profile-content">
-        <div class="container">
-            <!-- <app-tabla-inmuebles></app-tabla-inmuebles> -->
-        </div>
-    </div>
-
 </div>

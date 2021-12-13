@@ -10,12 +10,7 @@
     <tr *ngFor="let inmueble of inmuebles">
       <td>{{ inmueble.id }}</td>
       <td>{{ inmueble.direccion }}</td>
-      <div *ngIf="inmueble.estadoInmuebleList[0]?.hasOwnProperty('id')">
-        <td>{{ inmueble.estadoInmuebleList[0].estado}}</td>
-      </div>
-      <div *ngIf="!inmueble.estadoInmuebleList[0]?.hasOwnProperty('id')">
-        <td> Buenos dias </td>
-      </div>
+      <td>{{ inmueble.estadoInmuebleList[0]?.estado}}</td>
     </tr>
   </tbody>
 </table>
