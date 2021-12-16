@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'app/services/token.service';
 
 @Component({
   selector: 'app-extractos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtractosComponent implements OnInit {
 
-  constructor() { }
+  isAdmin = false;
+  constructor(
+    private Token: TokenService
+  ) {}
 
   ngOnInit(): void {
+    this.isAdmin = this.Token.isAdmin();
   }
-
 }

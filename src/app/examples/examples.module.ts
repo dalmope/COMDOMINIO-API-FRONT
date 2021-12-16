@@ -32,6 +32,7 @@ import { NuevoEscenarioComponent } from './escenarios/nuevo-escenario/nuevo-esce
 import { CanlendarioComponent } from './escenarios/canlendario/canlendario.component';
 import { MatCardModule } from '@angular/material/card';
 import { CalendarModule } from 'angular-calendar';
+import { DisponibilidadComponent } from './escenarios/disponibilidad/disponibilidad.component';
 
 @NgModule({
     imports: [
@@ -69,6 +70,7 @@ import { CalendarModule } from 'angular-calendar';
         TablaEscenariosComponent,
         NuevoEscenarioComponent,
         CanlendarioComponent,
+        DisponibilidadComponent,
     ]
 })
 export class ExamplesModule { }

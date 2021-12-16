@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EscenariosService } from 'app/services/escenarios.service';
 
 @Component({
@@ -11,7 +12,9 @@ export class TablaEscenariosComponent implements OnInit {
   focus1: any;
   escenarios: any;
 
-  constructor(private escenariosService: EscenariosService,) { }
+  constructor(private escenariosService: EscenariosService,
+    private router: Router) { }
+ 
 
   ngOnInit(): void {
     this.cargarInmuebles();
@@ -30,7 +33,7 @@ export class TablaEscenariosComponent implements OnInit {
   }
 
   goToEscenario(id: number) {
-    console.log(id);
+    this.router.navigateByUrl("/disponibilidad");
   }
 
 }

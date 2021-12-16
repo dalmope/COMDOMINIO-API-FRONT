@@ -1,9 +1,10 @@
 export const environment = {
   production: true,
-  authURL: 'https://sistemainventario-api.herokuapp.com/auth/',
-  changePasswordURL: 'https://sistemainventario-api.herokuapp.com/email-password/',
-  inmueblesURL: 'https://sistemainventario-api.herokuapp.com/inmuebles/',
-  usuariosURL: 'https://sistemainventario-api.herokuapp.com/usuarios/',
-  escenariosURL: 'https://sistemainventario-api.herokuapp.com/escenarios/',
+  productoURL: 'https://awac-condominios.herokuapp.com/producto/',
+  authURL: 'https://awac-condominios.herokuapp.com/auth/',
+  changePasswordURL: 'https://awac-condominios.herokuapp.com/email-password/',
+  usuariosURL: 'https://awac-condominios.herokuapp.com/usuarios/',
+  inmueblesURL: 'https://awac-condominios.herokuapp.com/inmuebles/',
+  escenariosURL: 'https://awac-condominios.herokuapp.com/escenarios/',
   cuentasURL: 'https://awac-condominios.herokuapp.com/cuentas/',
 };

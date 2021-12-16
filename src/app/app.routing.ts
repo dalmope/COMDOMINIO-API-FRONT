@@ -12,6 +12,8 @@ import { InmueblesComponent } from './examples/inmuebles/inmuebles.component';
 import { DataTablesModule } from 'angular-datatables';
 import { PropietariosComponent } from './examples/propietarios/propietarios.component';
 import { EscenariosComponent } from './examples/escenarios/escenarios.component';
+import { DisponibilidadComponent } from './examples/escenarios/disponibilidad/disponibilidad.component';
+import { ExtractosComponent } from './examples/extractos/extractos.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -23,6 +25,8 @@ const routes: Routes =[
     { path: 'inmuebles',          component: InmueblesComponent },
     { path: 'propietarios',       component: PropietariosComponent },
     { path: 'escenarios',         component: EscenariosComponent },
+    { path: 'disponibilidad',     component: DisponibilidadComponent },
+    { path: 'extractos',          component: ExtractosComponent },
 ];
 
 @NgModule({

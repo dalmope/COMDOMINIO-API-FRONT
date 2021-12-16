@@ -74,7 +74,7 @@ export class CanlendarioComponent {
     {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
-      title: 'A 3 day event',
+      title: 'Mariana Perez',
       color: colors.red,
       actions: this.actions,
       allDay: true,
@@ -82,25 +82,25 @@ export class CanlendarioComponent {
         beforeStart: true,
         afterEnd: true,
       },
-      draggable: true,
+      draggable: true,  
     },
     {
       start: startOfDay(new Date()),
-      title: 'An event with no end date',
+      title: 'Julana Ramirez',
       color: colors.yellow,
       actions: this.actions,
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
+      title: 'Camilo Gonzalez',
       color: colors.blue,
       allDay: true,
     },
     {
       start: addHours(startOfDay(new Date()), 2),
       end: addHours(new Date(), 2),
-      title: 'A draggable and resizable event',
+      title: 'Juan Perez',
       color: colors.yellow,
       actions: this.actions,
       resizable: {

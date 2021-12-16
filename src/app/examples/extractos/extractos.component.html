@@ -1,1 +1,32 @@
-<p>extractos works!</p>
+<div class="wrapper">
+    <div class=" filter page-header page-header-xs" data-parallax="true"
+        style="background-image: url('./assets/img/fabio-mangione.jpg');">
+        <div class="filter"></div>
+        <h2 style="font-size: 15vh; color: rgb(255, 255, 255);">Cuentas</h2>
+    </div>
+    <!-- navtab -->
+    <div class="nav-tabs-navigation">
+        <ngb-tabset [justify]="'center'">
+            <ngb-tab title="Lista">
+                <ng-template ngbTabContent>
+                    <div class="section profile-content">
+                        <div *ngIf="isAdmin" class="container">
+                            <app-tabla-inmuebles></app-tabla-inmuebles>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Nuevo">
+                <ng-template ngbTabContent>
+                    <app-nuevo-inmueble></app-nuevo-inmueble>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Asignar">
+                <ng-template ngbTabContent>
+                    <app-asignar-inmueble></app-asignar-inmueble>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+
+</div>

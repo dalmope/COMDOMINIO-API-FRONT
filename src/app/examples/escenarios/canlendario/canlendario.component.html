@@ -8,23 +8,23 @@
           [(viewDate)]="viewDate"
           (viewDateChange)="closeOpenMonthViewDay()"
         >
-          Previous
+          Anterior
         </div>
-        <div
+        <div style="background-color: #0062cc;"
           class="btn btn-outline-secondary"
           mwlCalendarToday
           [(viewDate)]="viewDate"
         >
-          Today
+          Hoy
         </div>
-        <div
-          class="btn btn-primary"
+        <div 
+          class="btn btn-primary "
           mwlCalendarNextView
           [view]="view"
           [(viewDate)]="viewDate"
           (viewDateChange)="closeOpenMonthViewDay()"
         >
-          Next
+          Siguiente
         </div>
       </div>
     </div>
@@ -38,21 +38,21 @@
           (click)="setView(CalendarView.Month)"
           [class.active]="view === CalendarView.Month"
         >
-          Month
+          Meses
         </div>
         <div
           class="btn btn-primary"
           (click)="setView(CalendarView.Week)"
           [class.active]="view === CalendarView.Week"
         >
-          Week
+          Semanas
         </div>
         <div
           class="btn btn-primary"
           (click)="setView(CalendarView.Day)"
           [class.active]="view === CalendarView.Day"
         >
-          Day
+          Dias
         </div>
       </div>
     </div>
@@ -95,9 +95,9 @@
   <br /><br /><br />
   
   <h3>
-    Edit events
+    Editar eventos
     <button class="btn btn-primary float-right" (click)="addEvent()">
-      Add new
+      Agregar nuevo
     </button>
     <div class="clearfix"></div>
   </h3>
@@ -106,12 +106,12 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Primary color</th>
-          <th>Secondary color</th>
-          <th>Starts at</th>
-          <th>Ends at</th>
-          <th>Remove</th>
+          <th>Tirulo</th>
+          <th>Color primario</th>
+          <th>Color secundario</th>
+          <th>Fecha inicio</th>
+          <th>Fecha Fin</th>
+          <th>Eliminar</th>
         </tr>
       </thead>
   
@@ -171,7 +171,7 @@
           </td>
           <td>
             <button class="btn btn-danger" (click)="deleteEvent(event)">
-              Delete
+              Eliminar
             </button>
           </td>
         </tr>
