@@ -1,3 +1,5 @@
+import { Inmuebles } from "./Inmuebles";
+
 
 export class Usuarios {
     id: number;
@@ -10,6 +12,7 @@ export class Usuarios {
     email: string;
     password: string;
     rol: string;
+    inmueblesSet: {}	
     
     constructor(tipoDoc: String, numDoc: number, nombre: string, apellido: string, nombreUsuario: string, telefono: number, email: string, password: string, rol: string) {
         this.tipoDoc = tipoDoc;

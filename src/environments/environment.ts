@@ -11,6 +11,8 @@ export const environment = {
   changePasswordURL: 'https://awac-condominios.herokuapp.com/email-password/',
   usuariosURL: 'https://awac-condominios.herokuapp.com/usuarios/',
   inmueblesURL: 'https://awac-condominios.herokuapp.com/inmuebles/',
+  escenariosURL: 'https://awac-condominios.herokuapp.com/escenarios/',
+  cuentasURL: 'https://awac-condominios.herokuapp.com/cuentas/',
 };
 
 // // Variables for localhost

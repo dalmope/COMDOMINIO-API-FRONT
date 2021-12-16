@@ -1,5 +1,6 @@
-export class Inmueble {
+export class Inmuebles {
 
+    id?: number;
     direccion: string;
 
     constructor(direccion: string) {

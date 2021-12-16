@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+            <h2 class="text-center">¿Deseas Agregar un escenario?</h2>
+            <form class="contact-form" [formGroup]="nuevoEscenario" (ngSubmit)="agregarEscenario()" novalidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Nombre del escenario </label>
+
+                        <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                            </div>
+                            <input id="nombre" type="text" formControlName="nombre" type="text" class="form-control"
+                                placeholder="Nombre" (focus)="focus=true" (blur)="focus=false">
+                        </div>
+
+                    </div>
+                </div>
+                <label>Descripcion del escenario </label>
+                <textarea class="form-control" rows="4" id="descripcion" type="text" formControlName="descripcion"
+                    placeholder="Describe el escenario, esta descripcion sera visible para los usuarios..."></textarea>
+                <div class="row">
+                    <div class="col-md-4 mr-auto ml-auto">
+                        <button class="btn btn-danger btn-lg btn-fill">Agregar escenario</button>
+                    </div>
+                </div>
+
+                <div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

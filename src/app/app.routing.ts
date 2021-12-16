@@ -11,6 +11,7 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { InmueblesComponent } from './examples/inmuebles/inmuebles.component';
 import { DataTablesModule } from 'angular-datatables';
 import { PropietariosComponent } from './examples/propietarios/propietarios.component';
+import { EscenariosComponent } from './examples/escenarios/escenarios.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes =[
     { path: 'landing',            component: LandingComponent },
     { path: 'nucleoicons',        component: NucleoiconsComponent },
     { path: 'inmuebles',          component: InmueblesComponent },
-    { path: 'propietarios',       component: PropietariosComponent }
+    { path: 'propietarios',       component: PropietariosComponent },
+    { path: 'escenarios',         component: EscenariosComponent },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 <div class="container">
+    <app-card-line-chart></app-card-line-chart>
     <div *ngIf="!isAdmin">
         <form class="register-form" #f="ngForm" (ngSubmit)="onCreate()" novalidate>
             <label>Registrar Nuevo Usuario</label>
@@ -6,31 +7,17 @@
             <br>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="input-group form-group-no-border" (blur)="focus = false" [ngClass]="{ 'input-group-focus': focus === true }">
+                    <div class="input-group form-group-no-border" (blur)="focus = false"
+                        [ngClass]="{ 'input-group-focus': focus === true }">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
                                 <i _ngcontent-qsr-c126="" class="nc-icon nc-badge"></i>
                             </span>
                         </div>
-                        <select matNativeControl required>
-                            <option value="Cedula">Cedula</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                          </select>
-
-                        <input id="tipoDoc" name="tipoDoc" type="text" class="form-control" placeholder="Tipo de Documento"
-                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="tipoDoc" required />
+                        <input id="tipoDoc" name="tipoDoc" type="text" class="form-control"
+                            placeholder="Tipo de Documento" (focus)="focus = true" (blur)="focus = false"
+                            [(ngModel)]="tipoDoc" required />
                     </div>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Cars</mat-label>
-                        <select matNativeControl required>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                        </select>
-                      </mat-form-field>
                 </div>
 
                 <div class="col-md-6">
@@ -40,12 +27,13 @@
                                 <i class="fas fa-hashtag"></i>
                             </span>
                         </div>
-                        <input id="numDoc" name="numDoc" type="text" class="form-control" placeholder="Numero de Documento"
-                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="numDoc" required />
+                        <input id="numDoc" name="numDoc" type="text" class="form-control"
+                            placeholder="Numero de Documento" (focus)="focus = true" (blur)="focus = false"
+                            [(ngModel)]="numDoc" required />
                     </div>
                 </div>
             </div>
-<br>
+            <br>
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
@@ -58,7 +46,7 @@
                             (focus)="focus = true" (blur)="focus = false" [(ngModel)]="nombre" required />
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
                         <div class="input-group-prepend">
@@ -71,7 +59,7 @@
                     </div>
                 </div>
             </div>
-<br>
+            <br>
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
@@ -80,8 +68,9 @@
                                 <i class="fas fa-signature"></i>
                             </span>
                         </div>
-                        <input id="nombreUsuario" name="nombreUsuario" type="text" class="form-control" placeholder="Nombre de Usuario"
-                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="nombreUsuario" required />
+                        <input id="nombreUsuario" name="nombreUsuario" type="text" class="form-control"
+                            placeholder="Nombre de Usuario" (focus)="focus = true" (blur)="focus = false"
+                            [(ngModel)]="nombreUsuario" required />
                     </div>
                 </div>
 
@@ -92,13 +81,14 @@
                                 <i class="fas fa-phone"></i>
                             </span>
                         </div>
-                        <input id="telefono" name="telefono" type="text" class="form-control" placeholder="Telefono de Contacto"
-                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="telefono" required />
+                        <input id="telefono" name="telefono" type="text" class="form-control"
+                            placeholder="Telefono de Contacto" (focus)="focus = true" (blur)="focus = false"
+                            [(ngModel)]="telefono" required />
                     </div>
                 </div>
             </div>
 
-<br>
+            <br>
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
@@ -107,11 +97,12 @@
                                 <i class="fas fa-at"></i>
                             </span>
                         </div>
-                        <input class="" id="email" name="email" type="text" class="form-control" placeholder="Correo Electronico"
-                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="email" required />
+                        <input class="" id="email" name="email" type="text" class="form-control"
+                            placeholder="Correo Electronico" (focus)="focus = true" (blur)="focus = false"
+                            [(ngModel)]="email" required />
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="input-group form-group-no-border" [ngClass]="{ 'input-group-focus': focus === true }">
                         <div class="input-group-prepend">
@@ -124,6 +115,46 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-group-no-border" (blur)="focus = false"
+                        [ngClass]="{ 'input-group-focus': focus === true }">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i _ngcontent-qsr-c126="" class="nc-icon nc-badge"></i>
+                            </span>
+                        </div>
+                        <input id="direccion" name="direccion" type="text" class="form-control" placeholder="Inmueble"
+                            (focus)="focus = true" (blur)="focus = false" [(ngModel)]="direccion" required />
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="tim-title">
+                        <h3>¿Es admin?</h3>
+                    </div>
+                    <bSwitch [switch-on-color]="'primary'">
+                    </bSwitch>
+
+                </div>
+
+                <div class="col-md-3">
+                    <div class="tim-title">
+                        <h3>¿Arrendado?</h3>
+                    </div>
+                    <bSwitch [switch-on-color]="'primary'" [(ngModel)]="state_default">
+                    </bSwitch>
+
+                </div>
+
+
+            </div>
+
+
+
+
 
 
             <br>
